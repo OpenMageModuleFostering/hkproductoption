@@ -3,10 +3,10 @@
     "type": "magento-module",
     "license": "OLS-v3.0",
     "homepage": "",
-    "description": "Custom option on product list page.",
+    "description": "Custom option on product list page",
     "authors": [
     {
-        "name": "Hardik",
+        "name": "Hardik Patel",
         "email": "hkpatel201@gmail.com"
     }
 ],
