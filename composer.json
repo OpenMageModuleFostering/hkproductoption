@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/hkproductoption",
+    "type": "magento-module",
+    "license": "OLS-v3.0",
+    "homepage": "",
+    "description": "Custom option on product list page.",
+    "authors": [
+    {
+        "name": "Hardik",
+        "email": "hkpatel201@gmail.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+   
+<!--    <customoption_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+      <block type="customoption/index" name="customoption_index" template="customoption/index.phtml"/>   
+    </reference>   
+  </customoption_index_index> -->
+  
+    
+    <catalog_category_layered translate="label">
+        
+        <reference name="product_list">
+            <action method="setTemplate">
+                <template>customoption/index.phtml</template>
+            </action>
+        </reference>
+        
+        
+    </catalog_category_layered>  
+</layout>   
+	
