@@ -10,22 +10,20 @@
     </reference>   
   </customoption_index_index> -->
   
-    
-    <catalog_category_layered translate="label">
-        
+    <catalog_category_default translate="label">
         <reference name="product_list">
             <action method="setTemplate">
                 <template>customoption/index.phtml</template>
             </action>
         </reference>
-    </catalog_category_layered>
-	
-	<catalog_category_default translate="label">
-		  <reference name="product_list">
+    </catalog_category_default>
+    
+    <catalog_category_layered translate="label">
+        <reference name="product_list">
             <action method="setTemplate">
                 <template>customoption/index.phtml</template>
             </action>
         </reference>
-	</catalog_category_default>
+    </catalog_category_layered>  
 </layout>   
 	

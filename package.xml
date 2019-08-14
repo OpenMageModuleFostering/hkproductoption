@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <package>
     <name>hkproductoption</name>
-    <version>1.1.0.1</version>
+    <version>1.2.0.1</version>
     <stability>stable</stability>
     <license uri="http://opensource.org/licenses/osl-3.0.php">OLS v3.0</license>
     <channel>community</channel>
     <extends/>
-    <summary>Custom option on product list page</summary>
-    <description>Using this extension you can display your product custom option on product list page</description>
-    <notes>Fixed problem in some magento version. Also fixed grid view and list view option not working problem.</notes>
-    <authors><author><name>Hardik Patel</name><user>khpatel201</user><email>hkpatel201@gmail.com</email></author></authors>
-    <date>2014-05-16</date>
-    <time>15:14:49</time>
-    <contents><target name="magecommunity"><dir name="HK"><dir name="Customoption"><dir name="Helper"><file name="Data.php" hash="cc3422ad60cb708471da7901b4484612"/></dir><dir name="etc"><file name="config.xml" hash="391a253a65ce75cc4fb3cc6c388bce36"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="customoption.xml" hash="66ff876b8e6368a8d2b5ab0aa482fa64"/></dir><dir name="template"><dir name="customoption"><file name="index.phtml" hash="8708dc2be2a167f0340bec6b4557205c"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="HK_Customoption.xml" hash="a0b44dbff7e1cfafde4e264c70af43d8"/></dir></target></contents>
+    <summary>Custom option on product list page.</summary>
+    <description>Now you can display your product custom option on product list page. Also you can add your product direct from list page with selected custom option.</description>
+    <notes>Latest version compatible</notes>
+    <authors><author><name>Hardik</name><user>khpatel201</user><email>hkpatel201@gmail.com</email></author></authors>
+    <date>2014-05-17</date>
+    <time>04:51:19</time>
+    <contents><target name="magecommunity"><dir name="HK"><dir name="Customoption"><dir name="Helper"><file name="Data.php" hash="cc3422ad60cb708471da7901b4484612"/></dir><dir name="etc"><file name="config.xml" hash="391a253a65ce75cc4fb3cc6c388bce36"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="customoption.xml" hash="9b282dd02e6fc51f09f9552cc9ae6351"/></dir><dir name="template"><dir name="customoption"><file name="index.phtml" hash="1d06b6903a93b8cbec07e4671c53d9dd"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="HK_Customoption.xml" hash="a0b44dbff7e1cfafde4e264c70af43d8"/></dir></target></contents>
     <compatible/>
-    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.6.0.0</min><max>1.7</max></package></required></dependencies>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
 </package>

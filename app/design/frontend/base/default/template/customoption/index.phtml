@@ -12,16 +12,16 @@
     <?php $_iterator = 0; ?>
     <ol class="products-list" id="products-list">
     <?php foreach ($_productCollection as $_product): ?>
-	
-	 <?php
-        $productSku = $_product->getSku();
-        $product = Mage::getModel('catalog/product');
-        $productId = $product->getIdBySku( $productSku );
-        $product = Mage::getModel("catalog/product")->load($productId);
-        $attVal = $product->getOptions();
-        $optStr = "";
-    ?>
-	
+        
+        <?php
+            $productSku = $_product->getSku();
+            $product = Mage::getModel('catalog/product');
+            $productId = $product->getIdBySku( $productSku );
+            $product = Mage::getModel("catalog/product")->load($productId);
+            $attVal = $product->getOptions();
+            $optStr = "";
+        ?>
+        
         <li class="item<?php if( ++$_iterator == sizeof($_productCollection) ): ?> last<?php endif; ?>">
             <?php // Product Image ?>
             <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" width="135" height="135" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
@@ -35,22 +35,21 @@
                     <?php endif; ?>
                     <?php echo $this->getPriceHtml($_product, true) ?>
                     <?php if($_product->isSaleable()): ?>
-					
-					<form action="<?php echo $this->helper('checkout/cart')->getAddUrl($_product)?>" method="post" id= "product_addtocart_form" <?php if($_product->getOptions()):?> enctype="multipart/form-data"<?php endif;?>>
-					<div style='float: left; width: 100px;'>
-					 <?php foreach($attVal as $optionKey => $optionVal)
-					{
-						 $optStr.= "<select style='display:block; clear:both;' name='options[".$optionVal->getId()."]'>";           foreach($optionVal->getValues() as $valuesKey => $valuesVal)
-					{
-						  $optStr.= "<option value='".$valuesVal->getId()."'>".$valuesVal->getTitle()."</option>";
-					}
-					$optStr.= "</select>";
-					}
-					echo($optStr );?>
+                    <form action="<?php echo $this->helper('checkout/cart')->getAddUrl($_product)?>" method="post" id= "product_addtocart_form" <?php if($_product->getOptions()):?> enctype="multipart/form-data"<?php endif;?>>
+                            <div style='float: left; width: 100px;'>
+                        <?php foreach($attVal as $optionKey => $optionVal)
+                       {
+                            $optStr.= "<select style='display:block; clear:both;' name='options[".$optionVal->getId()."]'>";           foreach($optionVal->getValues() as $valuesKey => $valuesVal)
+                       {
+                             $optStr.= "<option value='".$valuesVal->getId()."'>".$valuesVal->getTitle()."</option>";
+                       }
+                       $optStr.= "</select>";
+                       }
+                       echo($optStr );?>
 
-					 <!--Replace "buttonImage.png" with any button image in your skin images -->
-					 <input type="image" value="Add to cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product)?>')" style="background: none repeat scroll 0px 0px rgb(241, 130, 0); border: 1px solid rgb(222, 84, 0); color: rgb(255, 255, 255); height: 19px; text-align: center; white-space: nowrap; width: 65px; font: bold 12px/19px Arial,Helvetica,sans-serif; padding: 1px 8px;">
-					 </div>
+                        <!--Replace "buttonImage.png" with any button image in your skin images -->
+                        <input type="image" value="Add to cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product)?>')" style="background: none repeat scroll 0px 0px rgb(241, 130, 0); border: 1px solid rgb(222, 84, 0); color: rgb(255, 255, 255); height: 19px; text-align: center; white-space: nowrap; width: 65px; font: bold 12px/19px Arial,Helvetica,sans-serif; padding: 1px 8px;">
+                        </div>
                     <?php else: ?>
                         <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
                     <?php endif; ?>
@@ -66,7 +65,7 @@
                             <li><span class="separator">|</span> <a href="<?php echo $_compareUrl ?>" class="link-compare"><?php echo $this->__('Add to Compare') ?></a></li>
                         <?php endif; ?>
                     </ul>
-					</form>
+                         </form>
                 </div>
             </div>
         </li>
