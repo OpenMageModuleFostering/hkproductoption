@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/hkproductoption",
+    "name": "openmage-module-fostering\/hkproductoption",
     "type": "magento-module",
-    "license": "OLS-v3.0",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Custom option on product list page.",
     "authors": [
